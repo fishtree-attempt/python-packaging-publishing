@@ -1,25 +1,29 @@
 ---
-title: "Publishing code and data"
+title: Publishing code and data
 teaching: 0
 exercises: 0
-questions:
-- ""
-objectives:
-- ""
-keypoints:
 ---
 
 ## Why and what
 
+::::::::::::::::::::::::::::::::::::::: objectives
+
+- 
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::: questions
+
+- 
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
 Publishing makes the code, data, and documentation accessible. We 'll address
-each in turn.  
+each in turn.
 
 Releasing isn't necessarily enough.
 
 ## Publishing Code Getting A DOI
 
 Zenodo, archiving a copy, and doi
-
 
 ## Serving the documentation
 
@@ -28,5 +32,3 @@ Zenodo, archiving a copy, and doi
 
 
 
-
-{% include links.md %}
