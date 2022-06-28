@@ -101,7 +101,6 @@
             More <i data-feather="chevron-down"></i>
           </button>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-<li><a class="dropdown-item" href="profiles.html">Learner Profiles</a></li>
 <li><a class="dropdown-item" href="discuss.html">Discussion</a></li>
 <li><a class="dropdown-item" href="figures.html">Figures</a></li>
 <li><a class="dropdown-item" href="reference.html"></a></li>
@@ -334,8 +333,16 @@
                 <div id="flush-collapseTwelve" class="accordion-collapse collapse" aria-labelledby="flush-headingTwelve" data-bs-parent="#accordionFlush12">
                   <div class="accordion-body">
                     <ul>
-<li><a href="profiles.html">Learner Profiles</a></li>
-<li><a href="discuss.html">Discussion</a></li>
+<li>
+                        <a href="key-points.html">Key Points</a>
+                      </li>
+                      <li>
+                        <a href="reference.html#glossary">Glossary</a>
+                      </li>
+                      <li>
+                        <a href="profiles.html">Learner Profiles</a>
+                      </li>
+                      <li><a href="discuss.html">Discussion</a></li>
 <li><a href="figures.html">Figures</a></li>
 <li><a href="reference.html"></a></li>
                     </ul>
@@ -343,8 +350,8 @@
                 </div>
               </div>
             </div>
-
-            <a href="aio.html">See all in one page</a>
+            <hr class="half-width resources">
+<a href="aio.html">See all in one page</a>
 
             <hr class="d-none d-sm-block d-md-none">
 <div class="d-grid gap-1">
@@ -421,7 +428,7 @@
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>The rest of the episode adds them</p>
 </div>
@@ -873,7 +880,7 @@ Keep motivation as easing in  and gradually scaling up to stay inclusive -->
 <hr class="half-width">
 <p>Pip is the most common package manager for Python. Pip allows you to easily install Python packages locally from your computer or from an online repository like the <a href="https://pypi.org/" class="external-link">Python Package Index (PyPI)</a>. Once a package is installed with pip, you can <code>import</code> that package and use it in your own code.</p>
 <p>Pip is a command line tool. We’ll start by exploring its help manual:</p>
-<pre><code><span class="va">pip</span></code></pre>
+<pre><code><span><span class="va">pip</span></span></code></pre>
 <p>{:.language-bash}</p>
 <p>The output will look like this</p>
 <div class="codewrapper">
@@ -981,8 +988,8 @@ sys.path</code></pre>
 </div>
 <p>Here we see that Python is aware of the path to the Python executable, as well as other directories like <code>site-packages</code>.</p>
 <p>sys.path is a list of strings, each describing the absolute path to a directory. Python will look in these directories for modules. If we have a directory containing modules we want Python to be aware of, we append it that directory to the path. If I have a package in <code>/home/vlad/Documents/science/cool-package</code> I add it with <code>sys.path.append</code></p>
-<pre><code><span class="fu">sys.path.append</span><span class="op">(</span><span class="st">'/home/vlad/Documents/science/cool-package'</span><span class="op">)</span>
-<span class="va">sys.path</span></code></pre>
+<pre><code><span><span class="fu">sys.path.append</span><span class="op">(</span><span class="st">'/home/vlad/Documents/science/cool-package'</span><span class="op">)</span></span>
+<span><span class="va">sys.path</span></span></code></pre>
 <p>{:.language-python}</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1579,7 +1586,7 @@ what are dependencies?
 <p>Next the user will need to know how to install the code and make it run. A collaborator or contributor might need different instructions than a more passive user.</p>
 <p>Once we’re using it we may have questions about details of the implementation or how the pieces work together. We may need to know the usage for a specific function.</p>
 <p>In any python kernel we have access to information about all objects available through the <code>help()</code> function.</p>
-<pre><code><span class="fu">help</span><span class="op">(</span><span class="va">print</span><span class="op">)</span></code></pre>
+<pre><code><span><span class="fu">help</span><span class="op">(</span><span class="va">print</span><span class="op">)</span></span></code></pre>
 <p>{:.language-python}</p>
 <p>We can use this at a terminal or in a Jupyter noteook. In a Jupyter notebook we can also access help with <code>?</code> and with <kbd>shift</kbd> + <kbd>tab</kbd>. These forms of help all use the docstring in python.</p>
 <!-- Introducing documentation and motivation
@@ -1985,9 +1992,9 @@ Then show help -->
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.6.0" class="external-link">sandpaper (0.6.0)</a>,
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.6.2" class="external-link">sandpaper (0.6.2)</a>,
         <a href="https://github.com/carpentries/pegboard/tree/0.3.0" class="external-link">pegboard (0.3.0)</a>,
-      and <a href="https://github.com/carpentries/varnish/tree/0.2.0" class="external-link">varnish (0.2.0)</a>.</p>
+      and <a href="https://github.com/carpentries/varnish/tree/0.2.1" class="external-link">varnish (0.2.1)</a>.</p>
 			</div>
 		</footer>
 </div> <!-- / div.container -->
@@ -2009,8 +2016,8 @@ Then show help -->
   "url": "https://fishtree-attempt.github.io/python-packaging-publishing/aio.html",
   "identifier": "https://fishtree-attempt.github.io/python-packaging-publishing/aio.html",
   "dateCreated": "2022-05-31",
-  "dateModified": "2022-06-21",
-  "datePublished": "2022-06-21"
+  "dateModified": "2022-06-28",
+  "datePublished": "2022-06-28"
 }
 
   </script><script>
