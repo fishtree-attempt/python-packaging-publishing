@@ -49,6 +49,9 @@
     <loc>https://preview.carpentries.org/python-packaging-publishing/about_contributors.html</loc>
   </url>
   <url>
+    <loc>https://preview.carpentries.org/python-packaging-publishing/aio.html</loc>
+  </url>
+  <url>
     <loc>https://preview.carpentries.org/python-packaging-publishing/discuss.html</loc>
   </url>
   <url>
@@ -56,6 +59,9 @@
   </url>
   <url>
     <loc>https://preview.carpentries.org/python-packaging-publishing/guide.html</loc>
+  </url>
+  <url>
+    <loc>https://preview.carpentries.org/python-packaging-publishing/images.html</loc>
   </url>
   <url>
     <loc>https://preview.carpentries.org/python-packaging-publishing/incubator-welcome.html</loc>
@@ -112,6 +118,9 @@
     <loc>https://preview.carpentries.org/python-packaging-publishing/instructor/about_contributors.html</loc>
   </url>
   <url>
+    <loc>https://preview.carpentries.org/python-packaging-publishing/instructor/aio.html</loc>
+  </url>
+  <url>
     <loc>https://preview.carpentries.org/python-packaging-publishing/instructor/discuss.html</loc>
   </url>
   <url>
@@ -121,10 +130,19 @@
     <loc>https://preview.carpentries.org/python-packaging-publishing/instructor/guide.html</loc>
   </url>
   <url>
+    <loc>https://preview.carpentries.org/python-packaging-publishing/instructor/images.html</loc>
+  </url>
+  <url>
     <loc>https://preview.carpentries.org/python-packaging-publishing/instructor/incubator-welcome.html</loc>
   </url>
   <url>
     <loc>https://preview.carpentries.org/python-packaging-publishing/instructor/index.html</loc>
+  </url>
+  <url>
+    <loc>https://preview.carpentries.org/python-packaging-publishing/instructor/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://preview.carpentries.org/python-packaging-publishing/instructor/key-points.html</loc>
   </url>
   <url>
     <loc>https://preview.carpentries.org/python-packaging-publishing/instructor/learner-profiles.html</loc>
@@ -140,6 +158,12 @@
   </url>
   <url>
     <loc>https://preview.carpentries.org/python-packaging-publishing/instructor/setup.html</loc>
+  </url>
+  <url>
+    <loc>https://preview.carpentries.org/python-packaging-publishing/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://preview.carpentries.org/python-packaging-publishing/key-points.html</loc>
   </url>
   <url>
     <loc>https://preview.carpentries.org/python-packaging-publishing/learner-profiles.html</loc>
