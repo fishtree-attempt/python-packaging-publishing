@@ -442,7 +442,7 @@ project to do. Then discuss problems you anticipate or have had.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>The rest of the episode adds them</p>
 </div>
@@ -648,12 +648,12 @@ abide by the guiding principles presented in these resources.</p>
 <hr class="half-width">
 <p>Sometimes we get to start from scratch. So we can set up everything
 from the beginning.</p>
-<div id="templates" class="callout callout">
+<div id="callout1" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="templates" class="callout-inner">
-<h3 class="callout-title">Templates<a class="anchor" aria-label="anchor" href="#templates"></a>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title" id="templates">Templates<a class="anchor" aria-label="anchor" href="#templates"></a>
 </h3>
 <div class="callout-content">
 <p>For some types of projects there are tools that generate the base
@@ -675,14 +675,14 @@ However, it will be similar to the examples above.</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> project</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> data</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> docs</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> experiments</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> package</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> setup.py</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> README.md</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">git</span> clone</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="bu">cd</span> project</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="fu">mkdir</span> data</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="fu">mkdir</span> docs</span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="fu">mkdir</span> experiments</span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a><span class="fu">mkdir</span> package</span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a><span class="fu">touch</span> setup.py</span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a><span class="fu">touch</span> README.md</span></code></pre>
 </div>
 <p>We will also have a <code>.gitignore</code> file and some files and
 folders that are not included. In general data is ignored, but scripts
@@ -701,12 +701,12 @@ location by replacing the <code>__</code> on each line</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> __/raw_data.csv <span class="co"># raw data for processing</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> __/generate_figures.py <span class="co"># functions to create figures for presentation/publication</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> __/new_technique.py <span class="co"># contains the novel method at the core of your publication</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> __/reproduce_paper.py <span class="co"># code to re-run the analyses reported in your methods paper about the package</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> __/helper_functions.py <span class="co"># auxilliary functions for routine tasks associated with the novel method</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> __/how_to_setup.md <span class="co"># details to help others prepare equivalent experiments to those presented in your paper</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu">touch</span> __/raw_data.csv <span class="co"># raw data for processing</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="fu">touch</span> __/generate_figures.py <span class="co"># functions to create figures for presentation/publication</span></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="fu">touch</span> __/new_technique.py <span class="co"># contains the novel method at the core of your publication</span></span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="fu">touch</span> __/reproduce_paper.py <span class="co"># code to re-run the analyses reported in your methods paper about the package</span></span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a><span class="fu">touch</span> __/helper_functions.py <span class="co"># auxilliary functions for routine tasks associated with the novel method</span></span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a><span class="fu">touch</span> __/how_to_setup.md <span class="co"># details to help others prepare equivalent experiments to those presented in your paper</span></span></code></pre>
 </div>
 </div>
 </div>
@@ -721,12 +721,12 @@ location by replacing the <code>__</code> on each line</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> data/raw_data.csv</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> experiments/generate_figures.py</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> package/new_technique.py</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> experiments/reproduce_paper.py</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> package/helper_functions.py</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> docs/how_to_setup.md</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">touch</span> data/raw_data.csv</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="fu">touch</span> experiments/generate_figures.py</span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="fu">touch</span> package/new_technique.py</span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="fu">touch</span> experiments/reproduce_paper.py</span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="fu">touch</span> package/helper_functions.py</span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a><span class="fu">touch</span> docs/how_to_setup.md</span></code></pre>
 </div>
 </div>
 </div>
@@ -746,34 +746,34 @@ project</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Getting</span> Started</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">----------------</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ex">to</span> install</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="ex">Getting</span> Started</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="ex">----------------</span></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a><span class="ex">to</span> install</span></code></pre>
 </div>
 <p><code>excerpt 2</code></p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> data_file <span class="kw">in</span> file_list:</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  proc_data <span class="op">=</span> pkg.preprocess(data_file)</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  proc_data.to_csv(data_file[:<span class="op">-</span><span class="dv">3</span>] <span class="op">+</span> <span class="st">'_proc.csv'</span>)</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  pkg.new_method(proc_data)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="cf">for</span> data_file <span class="kw">in</span> file_list:</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>  proc_data <span class="op">=</span> pkg.preprocess(data_file)</span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>  proc_data.to_csv(data_file[:<span class="op">-</span><span class="dv">3</span>] <span class="op">+</span> <span class="st">'_proc.csv'</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a>  pkg.new_method(proc_data)</span></code></pre>
 </div>
 <p><code>excerpt 3</code></p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(data_file)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>df.head()</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>df.describe()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(data_file)</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>df.head()</span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>df.describe()</span></code></pre>
 </div>
 <p><code>excerpt 4</code></p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">This</span> technique involves the best new analysis technique ever</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">the</span> background to understand the technique is these three things</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="ex">This</span> technique involves the best new analysis technique ever</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="ex">the</span> background to understand the technique is these three things</span></code></pre>
 </div>
 </div>
 </div>
@@ -977,21 +977,21 @@ Celsius:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fahr_to_celsius(temperature):</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Function to convert temperature from fahrenheit to Celsius</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">    Parameters</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">    -------------</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">    temperature : float</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">         temperature in Fahrenheit</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">         </span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">    --------</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">    temperature_c : float</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">          temperature in Celsius</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (temperature <span class="op">-</span> <span class="dv">32</span>) <span class="op">*</span> (<span class="dv">5</span> <span class="op">/</span> <span class="dv">9</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="kw">def</span> fahr_to_celsius(temperature):</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="co">    Function to convert temperature from fahrenheit to Celsius</span></span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="co">    Parameters</span></span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a><span class="co">    -------------</span></span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a><span class="co">    temperature : float</span></span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a><span class="co">         temperature in Fahrenheit</span></span>
+<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a><span class="co">         </span></span>
+<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a><span class="co">    Returns</span></span>
+<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a><span class="co">    --------</span></span>
+<span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a><span class="co">    temperature_c : float</span></span>
+<span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a><span class="co">          temperature in Celsius</span></span>
+<span id="cb1-14"><a href="#cb1-14" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb1-15"><a href="#cb1-15" tabindex="-1"></a>    <span class="cf">return</span> (temperature <span class="op">-</span> <span class="dv">32</span>) <span class="op">*</span> (<span class="dv">5</span> <span class="op">/</span> <span class="dv">9</span>)</span></code></pre>
 </div>
 <p>We use this function a lot, so we don’t want to have to copy and
 paste it every time. Instead, we can store it in a module and
@@ -1090,12 +1090,12 @@ with your neighbour.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install sphinx</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="ex">pip</span> install sphinx</span></code></pre>
 </div>
 </div>
 </div>
@@ -1201,7 +1201,7 @@ modules <strong>temperature</strong> and <strong>speed</strong>.</p>
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> conversions</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="fu">mkdir</span> conversions</span></code></pre>
 </div>
 </div>
 <div class="section level3">
@@ -1211,21 +1211,21 @@ modules <strong>temperature</strong> and <strong>speed</strong>.</p>
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fahr_to_celsius(temperature):</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Function to convert temperature from fahrenheit to Celsius</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co">    Parameters</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="co">    -------------</span></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co">    temperature : float</span></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="co">         temperature in Fahrenheit</span></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="co">         </span></span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns</span></span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="co">    --------</span></span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="co">    temperature_c : float</span></span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="co">          temperature in Celsius</span></span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (temperature <span class="op">-</span> <span class="dv">32</span>) <span class="op">*</span> (<span class="dv">5</span> <span class="op">/</span> <span class="dv">9</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="kw">def</span> fahr_to_celsius(temperature):</span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a><span class="co">    Function to convert temperature from fahrenheit to Celsius</span></span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a><span class="co">    Parameters</span></span>
+<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a><span class="co">    -------------</span></span>
+<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a><span class="co">    temperature : float</span></span>
+<span id="cb10-8"><a href="#cb10-8" tabindex="-1"></a><span class="co">         temperature in Fahrenheit</span></span>
+<span id="cb10-9"><a href="#cb10-9" tabindex="-1"></a><span class="co">         </span></span>
+<span id="cb10-10"><a href="#cb10-10" tabindex="-1"></a><span class="co">    Returns</span></span>
+<span id="cb10-11"><a href="#cb10-11" tabindex="-1"></a><span class="co">    --------</span></span>
+<span id="cb10-12"><a href="#cb10-12" tabindex="-1"></a><span class="co">    temperature_c : float</span></span>
+<span id="cb10-13"><a href="#cb10-13" tabindex="-1"></a><span class="co">          temperature in Celsius</span></span>
+<span id="cb10-14"><a href="#cb10-14" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb10-15"><a href="#cb10-15" tabindex="-1"></a>    <span class="cf">return</span> (temperature <span class="op">-</span> <span class="dv">32</span>) <span class="op">*</span> (<span class="dv">5</span> <span class="op">/</span> <span class="dv">9</span>)</span></code></pre>
 </div>
 <p>the file temperature.py will be treated as a module called
 temperature. This module contains the function
@@ -1249,19 +1249,19 @@ per second. Here’s the docstring desribing the function:</li>
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co">    Function to convert speed from kilometres per hour to meters per second</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co">    Parameters</span></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="co">    -------------</span></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="co">    speed : float</span></span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="co">         speed in kilometres per hour</span></span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns</span></span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="co">    --------</span></span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="co">    speed_ms : float</span></span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="co">          speed in meters per second</span></span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a><span class="co">    Function to convert speed from kilometres per hour to meters per second</span></span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a><span class="co">    Parameters</span></span>
+<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a><span class="co">    -------------</span></span>
+<span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a><span class="co">    speed : float</span></span>
+<span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a><span class="co">         speed in kilometres per hour</span></span>
+<span id="cb11-8"><a href="#cb11-8" tabindex="-1"></a></span>
+<span id="cb11-9"><a href="#cb11-9" tabindex="-1"></a><span class="co">    Returns</span></span>
+<span id="cb11-10"><a href="#cb11-10" tabindex="-1"></a><span class="co">    --------</span></span>
+<span id="cb11-11"><a href="#cb11-11" tabindex="-1"></a><span class="co">    speed_ms : float</span></span>
+<span id="cb11-12"><a href="#cb11-12" tabindex="-1"></a><span class="co">          speed in meters per second</span></span>
+<span id="cb11-13"><a href="#cb11-13" tabindex="-1"></a><span class="co">    """</span></span></code></pre>
 </div>
 </div>
 </div>
@@ -1271,27 +1271,27 @@ per second. Here’s the docstring desribing the function:</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2">Show me the solution</h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>conversions/speed.py</p>
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> kph_to_ms(speed):</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Function to convert speed from kilometres per hour to meters per second</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co">    Parameters</span></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="co">    -------------</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="co">    speed : float</span></span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="co">         speed in kilometres per hour</span></span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns</span></span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="co">    --------</span></span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="co">    speed_ms : float</span></span>
-<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="co">          speed in meters per second</span></span>
-<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> speed <span class="op">/</span> <span class="fl">3.6</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="kw">def</span> kph_to_ms(speed):</span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a><span class="co">    Function to convert speed from kilometres per hour to meters per second</span></span>
+<span id="cb12-4"><a href="#cb12-4" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" tabindex="-1"></a><span class="co">    Parameters</span></span>
+<span id="cb12-6"><a href="#cb12-6" tabindex="-1"></a><span class="co">    -------------</span></span>
+<span id="cb12-7"><a href="#cb12-7" tabindex="-1"></a><span class="co">    speed : float</span></span>
+<span id="cb12-8"><a href="#cb12-8" tabindex="-1"></a><span class="co">         speed in kilometres per hour</span></span>
+<span id="cb12-9"><a href="#cb12-9" tabindex="-1"></a></span>
+<span id="cb12-10"><a href="#cb12-10" tabindex="-1"></a><span class="co">    Returns</span></span>
+<span id="cb12-11"><a href="#cb12-11" tabindex="-1"></a><span class="co">    --------</span></span>
+<span id="cb12-12"><a href="#cb12-12" tabindex="-1"></a><span class="co">    speed_ms : float</span></span>
+<span id="cb12-13"><a href="#cb12-13" tabindex="-1"></a><span class="co">          speed in meters per second</span></span>
+<span id="cb12-14"><a href="#cb12-14" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb12-15"><a href="#cb12-15" tabindex="-1"></a>    <span class="cf">return</span> speed <span class="op">/</span> <span class="fl">3.6</span></span></code></pre>
 </div>
 </div>
 </div>
@@ -1306,7 +1306,7 @@ per second. Here’s the docstring desribing the function:</li>
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> conversions/__init__.py</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="fu">touch</span> conversions/__init__.py</span></code></pre>
 </div>
 <p>The init file is the map that tells Python what our package looks
 like. It is also what tells Python a directory is a module. An empty
@@ -1316,9 +1316,9 @@ import the package <strong>conversions</strong></p>
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> conversions <span class="im">import</span> temperature, speed</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(temperature.fahr_to_celsius(<span class="dv">100</span>))</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="im">from</span> conversions <span class="im">import</span> temperature, speed</span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a><span class="bu">print</span>(temperature.fahr_to_celsius(<span class="dv">100</span>))</span></code></pre>
 </div>
 <p>Even if the <code>__init__.py</code> file is empty, its existence
 indicates to Python that we can import names from that package. However,
@@ -1327,8 +1327,8 @@ the following code to the init file:</p>
 <div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> .temperature <span class="im">import</span> fahr_to_celsius</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> .speed <span class="im">import</span> kph_to_ms</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="im">from</span> .temperature <span class="im">import</span> fahr_to_celsius</span>
+<span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a><span class="im">from</span> .speed <span class="im">import</span> kph_to_ms</span></code></pre>
 </div>
 <p>The <code>.</code> before the <code>temperature</code> and
 <code>speed</code> means that they refer to local modules, that is,
@@ -1339,7 +1339,7 @@ the <code>conversions</code> module:</p>
 <div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> conversions <span class="im">import</span> fahr_to_celsius, kph_to_ms</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="im">from</span> conversions <span class="im">import</span> fahr_to_celsius, kph_to_ms</span></code></pre>
 </div>
 <p>Now, we can import from <code>conversions</code>, but only if our
 working directory is one level above the <code>conversions</code>
@@ -1355,27 +1355,27 @@ to format it correctly</p>
 <div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> setuptools</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"README.md"</span>, <span class="st">"r"</span>) <span class="im">as</span> fh:</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    long_description <span class="op">=</span> fh.read()</span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>setuptools.setup(</span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>    name<span class="op">=</span><span class="st">"conversions"</span>,</span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>    version<span class="op">=</span><span class="st">"0.0.1"</span>,</span>
-<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>    author<span class="op">=</span><span class="st">"Example Author"</span>,</span>
-<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>    author_email<span class="op">=</span><span class="st">"author@example.com"</span>,</span>
-<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>    description<span class="op">=</span><span class="st">"An example  package to perform unit conversions"</span>,</span>
-<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>    long_description<span class="op">=</span>long_description,</span>
-<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>    long_description_content_type<span class="op">=</span><span class="st">"text/markdown"</span>,</span>
-<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>    url<span class="op">=</span><span class="st">"https://github.com/pypa/sampleproject"</span>,</span>
-<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>    packages<span class="op">=</span>setuptools.find_packages(),</span>
-<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>    classifiers<span class="op">=</span>[</span>
-<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Programming Language :: Python :: 3"</span>,</span>
-<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>        <span class="st">"License :: OSI Approved :: MIT License"</span>,</span>
-<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Operating System :: OS Independent"</span>,</span>
-<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>    ],</span>
-<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="im">import</span> setuptools</span>
+<span id="cb17-2"><a href="#cb17-2" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"README.md"</span>, <span class="st">"r"</span>) <span class="im">as</span> fh:</span>
+<span id="cb17-4"><a href="#cb17-4" tabindex="-1"></a>    long_description <span class="op">=</span> fh.read()</span>
+<span id="cb17-5"><a href="#cb17-5" tabindex="-1"></a></span>
+<span id="cb17-6"><a href="#cb17-6" tabindex="-1"></a>setuptools.setup(</span>
+<span id="cb17-7"><a href="#cb17-7" tabindex="-1"></a>    name<span class="op">=</span><span class="st">"conversions"</span>,</span>
+<span id="cb17-8"><a href="#cb17-8" tabindex="-1"></a>    version<span class="op">=</span><span class="st">"0.0.1"</span>,</span>
+<span id="cb17-9"><a href="#cb17-9" tabindex="-1"></a>    author<span class="op">=</span><span class="st">"Example Author"</span>,</span>
+<span id="cb17-10"><a href="#cb17-10" tabindex="-1"></a>    author_email<span class="op">=</span><span class="st">"author@example.com"</span>,</span>
+<span id="cb17-11"><a href="#cb17-11" tabindex="-1"></a>    description<span class="op">=</span><span class="st">"An example  package to perform unit conversions"</span>,</span>
+<span id="cb17-12"><a href="#cb17-12" tabindex="-1"></a>    long_description<span class="op">=</span>long_description,</span>
+<span id="cb17-13"><a href="#cb17-13" tabindex="-1"></a>    long_description_content_type<span class="op">=</span><span class="st">"text/markdown"</span>,</span>
+<span id="cb17-14"><a href="#cb17-14" tabindex="-1"></a>    url<span class="op">=</span><span class="st">"https://github.com/pypa/sampleproject"</span>,</span>
+<span id="cb17-15"><a href="#cb17-15" tabindex="-1"></a>    packages<span class="op">=</span>setuptools.find_packages(),</span>
+<span id="cb17-16"><a href="#cb17-16" tabindex="-1"></a>    classifiers<span class="op">=</span>[</span>
+<span id="cb17-17"><a href="#cb17-17" tabindex="-1"></a>        <span class="st">"Programming Language :: Python :: 3"</span>,</span>
+<span id="cb17-18"><a href="#cb17-18" tabindex="-1"></a>        <span class="st">"License :: OSI Approved :: MIT License"</span>,</span>
+<span id="cb17-19"><a href="#cb17-19" tabindex="-1"></a>        <span class="st">"Operating System :: OS Independent"</span>,</span>
+<span id="cb17-20"><a href="#cb17-20" tabindex="-1"></a>    ],</span>
+<span id="cb17-21"><a href="#cb17-21" tabindex="-1"></a>)</span></code></pre>
 </div>
 <p>Now that our code is organized into a package and has setup
 instructions, how can we use it? If we try importing it now, what
@@ -1383,12 +1383,12 @@ happens?</p>
 <p>We need to install it first. Earlier, we saw that pip can install
 packages remotely from PyPI. pip can also install from a local
 directory.</p>
-<div id="relative-file-paths" class="callout callout">
+<div id="callout1" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="relative-file-paths" class="callout-inner">
-<h3 class="callout-title">Relative file paths<a class="anchor" aria-label="anchor" href="#relative-file-paths"></a>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title" id="relative-file-paths">Relative file paths<a class="anchor" aria-label="anchor" href="#relative-file-paths"></a>
 </h3>
 <div class="callout-content">
 <p>We want to install the package located in the
@@ -1407,7 +1407,7 @@ start with the <code>.</code> character), but if we run
 <div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-a</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-a</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1421,8 +1421,8 @@ start with the <code>.</code> character), but if we run
 <div class="codewrapper sourceCode" id="cb20">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> conversions</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-e</span> .</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a><span class="bu">cd</span> conversions</span>
+<span id="cb20-2"><a href="#cb20-2" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-e</span> .</span></code></pre>
 </div>
 <p>The <code>-e</code> flag (aka <code>--editable</code>) tells pip to
 install this package in editable mode. This allows us to make changes to
@@ -1468,7 +1468,7 @@ installed:</p>
 <div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> pip install <span class="at">--user</span> <span class="at">--upgrade</span> setuptools wheel</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> pip install <span class="at">--user</span> <span class="at">--upgrade</span> setuptools wheel</span></code></pre>
 </div>
 <pre><code>python3 setup.py sdist bdist_wheel</code></pre>
 <p>{: language-bash} This command should output a lot of text and once
@@ -1489,14 +1489,14 @@ distribution packages. You’ll need to install Twine:</p>
 <div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> pip install <span class="at">--user</span> <span class="at">--upgrade</span> twine</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> pip install <span class="at">--user</span> <span class="at">--upgrade</span> twine</span></code></pre>
 </div>
 <p>Once installed, run Twine to upload all of the archives under
 dist:</p>
 <div class="codewrapper sourceCode" id="cb26">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> twine upload <span class="at">--repository-url</span> https://test.pypi.org/legacy/ dist/<span class="pp">*</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> twine upload <span class="at">--repository-url</span> https://test.pypi.org/legacy/ dist/<span class="pp">*</span></span></code></pre>
 </div>
 <p>You will be prompted for the username and password you registered
 with Test PyPI. After the command completes, you should see output
@@ -1504,13 +1504,13 @@ similar to this:</p>
 <div class="codewrapper sourceCode" id="cb27">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Uploading</span> distributions to https://test.pypi.org/legacy/</span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Enter</span> your username: [your username]</span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Enter</span> your password:</span>
-<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="ex">Uploading</span> example_pkg_your_username-0.0.1-py3-none-any.whl</span>
-<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="ex">100%</span><span class="kw">|</span><span class="ex">█████████████████████</span><span class="kw">|</span> <span class="ex">4.65k/4.65k</span> [00:01<span class="op">&lt;</span>00:00, 2.88kB/s]</span>
-<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a><span class="ex">Uploading</span> example_pkg_your_username-0.0.1.tar.gz</span>
-<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a><span class="ex">100%</span><span class="kw">|</span><span class="ex">█████████████████████</span><span class="kw">|</span> <span class="ex">4.25k/4.25k</span> [00:01<span class="op">&lt;</span>00:00, 3.05kB/s]</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a><span class="ex">Uploading</span> distributions to https://test.pypi.org/legacy/</span>
+<span id="cb27-2"><a href="#cb27-2" tabindex="-1"></a><span class="ex">Enter</span> your username: [your username]</span>
+<span id="cb27-3"><a href="#cb27-3" tabindex="-1"></a><span class="ex">Enter</span> your password:</span>
+<span id="cb27-4"><a href="#cb27-4" tabindex="-1"></a><span class="ex">Uploading</span> example_pkg_your_username-0.0.1-py3-none-any.whl</span>
+<span id="cb27-5"><a href="#cb27-5" tabindex="-1"></a><span class="ex">100%</span><span class="kw">|</span><span class="ex">█████████████████████</span><span class="kw">|</span> <span class="ex">4.65k/4.65k</span> [00:01<span class="op">&lt;</span>00:00, 2.88kB/s]</span>
+<span id="cb27-6"><a href="#cb27-6" tabindex="-1"></a><span class="ex">Uploading</span> example_pkg_your_username-0.0.1.tar.gz</span>
+<span id="cb27-7"><a href="#cb27-7" tabindex="-1"></a><span class="ex">100%</span><span class="kw">|</span><span class="ex">█████████████████████</span><span class="kw">|</span> <span class="ex">4.25k/4.25k</span> [00:01<span class="op">&lt;</span>00:00, 3.05kB/s]</span></code></pre>
 </div>
 <p>Once uploaded your package should be viewable on TestPyPI, for
 example, <a href="https://test.pypi.org/project/example-pkg-your-username" class="external-link">https://test.pypi.org/project/example-pkg-your-username</a></p>
@@ -1694,7 +1694,7 @@ import one of our favorite packages. In a python interpreter:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="im">import</span> numpy</span></code></pre>
 </div>
 <p>That should work, because we have the package installed on our
 system. If not, use a package you know you have installed, or install
@@ -1703,20 +1703,20 @@ numpy.</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">virtualenv</span> myenv</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="ex">virtualenv</span> myenv</span></code></pre>
 </div>
 <p>if python 3 isn’t your default you might need to pass the version of
 python that you want installed:</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">virtualenv</span> myenv <span class="at">-p</span> python3.6</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">virtualenv</span> myenv <span class="at">-p</span> python3.6</span></code></pre>
 </div>
 <p>then we can activate the environment</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> myenv/bin/activate</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="bu">source</span> myenv/bin/activate</span></code></pre>
 </div>
 <p>Now we see that the cli changes to show the environment name and we
 can further test our environment with our favorite package from
@@ -1724,14 +1724,14 @@ before.</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="im">import</span> numpy</span></code></pre>
 </div>
 <p>Now, it won’t work, but we can install it and a few other
 favorites.</p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install numpy</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="ex">pip</span> install numpy</span></code></pre>
 </div>
 </section><section id="save-an-environment"><h2 class="section-heading">save an environment<a class="anchor" aria-label="anchor" href="#save-an-environment"></a>
 </h2>
@@ -1739,7 +1739,7 @@ favorites.</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> freeze <span class="op">&gt;</span> requirements.txt</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="ex">pip</span> freeze <span class="op">&gt;</span> requirements.txt</span></code></pre>
 </div>
 </section><section id="deactivate-an-environment"><h2 class="section-heading">Deactivate an environment<a class="anchor" aria-label="anchor" href="#deactivate-an-environment"></a>
 </h2>
@@ -1750,7 +1750,7 @@ you open a new terminal, you’ll be back to your default environment.</p>
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">deactivate</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="ex">deactivate</span></span></code></pre>
 </div>
 <div id="exercise" class="callout challenge">
 <div class="callout-square">
@@ -1777,7 +1777,7 @@ requirements file</p>
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-r</span> requirements.txt</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-r</span> requirements.txt</span></code></pre>
 </div>
 </div>
 </div>
@@ -2097,20 +2097,20 @@ documentation, how they’re similar and how they’re different.</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install sphinx</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">pip</span> install sphinx</span></code></pre>
 </div>
 <p>Move into the directory that is to store your documentation:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> docs</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="bu">cd</span> docs</span></code></pre>
 </div>
 <p>Start the interactive Sphinx quickstart wizard, which creates a
 Sphinx config file, <code>conf.py</code>, using your preferences.</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">sphinx-quickstart</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">sphinx-quickstart</span></span></code></pre>
 </div>
 <p>Suggested responses to the wizard’s questions:</p>
 <ul>
@@ -2148,8 +2148,8 @@ site using:</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> html</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> http.server <span class="at">-d</span> build/html</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="fu">make</span> html</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> http.server <span class="at">-d</span> build/html</span></code></pre>
 </div>
 <p>When you browse to the URL shown in the output of the second command
 you can see your HTML documentation site but it’s looking fairly bare!
@@ -2169,9 +2169,9 @@ to it.</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">API</span> documentation</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">==================</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="ex">API</span> documentation</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="ex">==================</span></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a></span></code></pre>
 </div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
@@ -2391,8 +2391,8 @@ that</p>
   "url": "https://preview.carpentries.org/python-packaging-publishing/aio.html",
   "identifier": "https://preview.carpentries.org/python-packaging-publishing/aio.html",
   "dateCreated": "2022-11-15",
-  "dateModified": "2024-02-27",
-  "datePublished": "2024-02-27"
+  "dateModified": "2024-03-05",
+  "datePublished": "2024-03-05"
 }
 
   </script><script>
